@@ -10,8 +10,13 @@ jobs:
     permissions:
       contents: read
     steps:
+    - name: Harden the runner (Audit all outbound calls)
+      uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+      with:
+        egress-policy: audit
+
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
     - name: Install gh-aw extension
       uses: github/gh-aw-actions/setup-cli@dc50be57c94373431b49d3d0927f318ac2bb5c4c # v0.62.5
       with:

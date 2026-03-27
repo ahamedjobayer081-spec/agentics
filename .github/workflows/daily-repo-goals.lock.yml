@@ -59,6 +59,11 @@ jobs:
       model: ${{ steps.generate_aw_info.outputs.model }}
       secret_verification_result: ${{ steps.validate-secret.outputs.verification_result }}
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: Setup Scripts
         uses: github/gh-aw-actions/setup@51c65948c64ab6752536ead71fba1fc2c20ed0bc # v0.64.0
         with:
@@ -276,6 +281,11 @@ jobs:
       output: ${{ steps.collect_output.outputs.output }}
       output_types: ${{ steps.collect_output.outputs.output_types }}
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: Setup Scripts
         uses: github/gh-aw-actions/setup@51c65948c64ab6752536ead71fba1fc2c20ed0bc # v0.64.0
         with:
@@ -828,6 +838,11 @@ jobs:
       tools_reported: ${{ steps.missing_tool.outputs.tools_reported }}
       total_count: ${{ steps.missing_tool.outputs.total_count }}
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: Setup Scripts
         uses: github/gh-aw-actions/setup@51c65948c64ab6752536ead71fba1fc2c20ed0bc # v0.64.0
         with:
@@ -939,6 +954,11 @@ jobs:
       detection_conclusion: ${{ steps.detection_conclusion.outputs.conclusion }}
       detection_success: ${{ steps.detection_conclusion.outputs.success }}
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: Setup Scripts
         uses: github/gh-aw-actions/setup@51c65948c64ab6752536ead71fba1fc2c20ed0bc # v0.64.0
         with:
@@ -1102,6 +1122,11 @@ jobs:
       process_safe_outputs_processed_count: ${{ steps.process_safe_outputs.outputs.processed_count }}
       process_safe_outputs_temporary_id_map: ${{ steps.process_safe_outputs.outputs.temporary_id_map }}
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: Setup Scripts
         uses: github/gh-aw-actions/setup@51c65948c64ab6752536ead71fba1fc2c20ed0bc # v0.64.0
         with:
@@ -1192,6 +1217,11 @@ jobs:
     env:
       GH_AW_WORKFLOW_ID_SANITIZED: dailyrepogoals
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       - name: Setup Scripts
         uses: github/gh-aw-actions/setup@51c65948c64ab6752536ead71fba1fc2c20ed0bc # v0.64.0
         with:
