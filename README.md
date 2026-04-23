@@ -1,4 +1,6 @@
 # ✨ The Agentics
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fahamedjobayer081-spec%2Fagentics.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fahamedjobayer081-spec%2Fagentics?ref=badge_shield)
+
 
 A sample family of reusable [GitHub Agentic Workflows](https://github.github.com/gh-aw/).
 
@@ -136,3 +138,7 @@ This automatically updates agent files, applies codemods, updates actions versio
 ## 💬 Share Feedback
 
 Is your favorite agentic workflow not here? Do you have an idea for a new one? Clone this repo and explore, create! Tell us about it! You can file bugs and feature requests as issues in this repository and share your thoughts in the `#agentic-workflows` channel in the [GitHub Next Discord](https://gh.io/next-discord).
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fahamedjobayer081-spec%2Fagentics.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fahamedjobayer081-spec%2Fagentics?ref=badge_large)
